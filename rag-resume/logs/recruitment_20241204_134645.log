@@ -1,0 +1,16 @@
+2024-12-04 13:48:48,859 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 13:49:21,299 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 13:50:59,545 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 13:52:31,763 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 13:55:42,308 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 13:56:06,643 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 13:57:49,772 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 14:00:03,898 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-04 14:00:03,907 - AI_Recruiter - ERROR - Processing error: 'charmap' codec can't encode character '\u25cf' in position 747: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\swarm-writer-agents\ai-recruiter-agency\app.py", line 202, in main
+    f.write(str(result))
+  File "C:\Users\syeda\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25cf' in position 747: character maps to <undefined>

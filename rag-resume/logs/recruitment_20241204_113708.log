@@ -1,0 +1,29 @@
+2024-12-04 11:37:37,587 - AI_Recruiter - ERROR - Error processing resume: Client.__init__() got an unexpected keyword argument 'proxies'
+2024-12-04 11:37:37,589 - AI_Recruiter - ERROR - Processing error: Client.__init__() got an unexpected keyword argument 'proxies'
+Traceback (most recent call last):
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\swarm-writer-agents\ai-recruiter-agency\app.py", line 128, in main
+    result = asyncio.run(process_resume(file_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\syeda\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\syeda\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\syeda\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\swarm-writer-agents\ai-recruiter-agency\app.py", line 53, in process_resume
+    orchestrator = OrchestratorAgent()
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\swarm-writer-agents\ai-recruiter-agency\agents\orchestrator.py", line 12, in __init__
+    super().__init__(
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\swarm-writer-agents\ai-recruiter-agency\agents\base_agent.py", line 10, in __init__
+    self.ollama_client = OpenAI(
+                         ^^^^^^^
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\ai-guild-fin-analysis-csv\venv\Lib\site-packages\openai\_client.py", line 112, in __init__
+    super().__init__(
+  File "C:\Users\syeda\OneDrive\Desktop\RAG-Examples\ai-guild-fin-analysis-csv\venv\Lib\site-packages\openai\_base_client.py", line 793, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'
